@@ -1,0 +1,21 @@
+# Copyright (C) 2024 Casper Meijn <casper@meijn.net>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  cargo-vet:
+    name: Cargo Vet
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install Rust
+        run: rustup update stable && rustup default stable
+      - name: Ensure that the tool cache is populated with the cargo-vet binary
+        run: cargo install --locked cargo-vet
+      - name: Invoke cargo-vet aggregate
+        run: cargo vet check
