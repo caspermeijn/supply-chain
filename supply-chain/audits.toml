@@ -11,6 +11,12 @@ who = "Casper Meijn <casper@meijn.net>"
 criteria = "safe-to-deploy"
 version = "0.3.2"
 
+[[trusted.libc]]
+criteria = "safe-to-deploy"
+user-id = 2915 # Amanieu d'Antras (Amanieu)
+start = "2021-01-27"
+end = "2025-03-29"
+
 [[trusted.syn]]
 criteria = "safe-to-deploy"
 user-id = 3618 # David Tolnay (dtolnay)
