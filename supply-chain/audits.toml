@@ -4,6 +4,11 @@
 
 # cargo-vet audits file
 
+[[audits.enum-kinds]]
+who = "Casper Meijn <casper@meijn.net>"
+criteria = "safe-to-deploy"
+version = "0.5.1"
+
 [[audits.mock_instant]]
 who = "Casper Meijn <casper@meijn.net>"
 criteria = "safe-to-deploy"
